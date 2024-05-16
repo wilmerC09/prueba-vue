@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Directiva from '../components/Vue/Directiva.vue';
+---
+
+<Layout title="Welcome to Astro.">
+
+	<Directiva client:load></Directiva>
+</Layout>
+
+<!-- <template>
+  <div>
+    probemos reactividad
+    
+    <p>Variable A: {{ variableA }}</p>
+    <p>Variable B: {{ variableB }}</p>
+    <div class=" border-2 border-black  w-96 mx-auto">
+      <h1>multiplicacion</h1>
+      <label  for="input">ingrese el primer numero</label>
+      <input v-model="variableA" class="rounded border-2 border-slate-950 w-3/4" type="number"><br>
+      <label for="input">ingrese el segundo numero</label>
+      <input  v-model="variableB"  class="rounded border-2 border-slate-950 w-3/4" type="number">
+
+      <p>multplicacionn</p>
+       <p>{{ multiplicacion }}</p>
+       <p>sumar</p>
+       <p>{{ suma }}</p>
+       <p>division</p>
+       <p>{{ division }}</p>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed } from 'vue';
+
+const variableA = ref(2);
+const variableB = ref(4);
+
+
+
+const multiplicacion = computed(() => variableA.value * variableB.value)
+const suma = computed(() => variableA.value + variableB.value);
+const division = computed(() => variableA.value / variableB.value);
+</script> -->
+
+
+<!-- <template>
+  <div class="border-2 shadow mx-auto py-6 px-5 w-96 mt-10">
+    <div class="flex flex-col space-y-2">
+      <input v-model="nuevoArreglo.name" class="rounded shadow bg-slate-300 outline-none px-3 py-3" placeholder="Nombre">
+      <input v-model="nuevoArreglo.price" class="rounded shadow bg-slate-300 outline-none px-3 py-3" placeholder="Precio">
+      <input v-model="nuevoArreglo.description" class="rounded shadow bg-slate-300 outline-none px-3 py-3" placeholder="Descripción">
+      <button @click="enviar" class="bg-green-400 rounded shadow px-3 py-2 text-white">Agregar</button>
+    </div>
+   
+    <div class="mt-4">
+      <ul>
+        <li v-for="(arreglos, index) in arreglo" :key="index">
+          {{ arreglos.name }} - {{ arreglos.price }} - {{ arreglos.description }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const nuevoArreglo = ref({
+  name: '',
+  price: '',
+  description: ''
+});
+
+const arreglo = ref([
+  {
+    name: "jairo",
+    price: "1000",
+    description: "comelo"
+  },
+  {
+    name: "yurley",
+    price: "4000",
+    description: "jode"
+  }
+]);
+
+function enviar() {
+  arreglo.value.push(nuevoArreglo.value)
+  nuevoArreglo = ""
+}
+
+</script>
+
+ -->
